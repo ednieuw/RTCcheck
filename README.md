@@ -1,7 +1,8 @@
 # RTCcheck
 When using DS3231 time modules some are not functioning perfect.  
 Check up to eight DS3231 RTC's using a TCA9548A I2C multiplexer and an Arduino Nano ESP32, ESP32 C3, S3 or similar. 
-A small sketch is included for Arduino UNO or similar. This is perfect to use if three or more DS3231 are tested. The one that drifts can be identified easily
+A small sketch is included for Arduino UNO or similar. 
+This UNO compatible script has no NTP time but is perfect to use if three or more DS3231 are tested. The one that drifts can be identified easily.
 
 With this sketch and some wiring up to eight DS3231 can be tested using the NTP time server as reference.
 The sketch connect with WIFI to internet and can be controlled with a BLE terminal app or the Arduino IDE serial terminal. 
