@@ -1,8 +1,12 @@
 # RTCcheck
 When using DS3231 time modules some are not functioning perfect.  
 Check up to eight DS3231 RTC's using a TCA9548A I2C multiplexer and an Arduino Nano ESP32, ESP32 C3, S3 or similar. 
+When a WS2812 or SK6812 LED-strip is attached colours indicate the drift of the RTC.
+
 A small sketch is included for Arduino UNO or similar. 
 This UNO compatible script has no NTP time but is perfect to use if three or more DS3231 are tested. The one that drifts can be identified easily.
+
+<img width="900" alt="image" src="https://github.com/user-attachments/assets/9e922c23-0284-4c15-b8a1-e6c1403f3660" />
 
 With this sketch and some wiring up to eight DS3231 can be tested using the NTP time server as reference.
 The sketch connect with WIFI to internet and can be controlled with a BLE terminal app or the Arduino IDE serial terminal. 
@@ -67,3 +71,6 @@ Software: ESP32_CommV08_RTC02.ino
 ESP32 Arduino core version: 2.0.17
 06/09/2025 17:30:46 
 ```
+<img width="600" alt="image" src="https://github.com/user-attachments/assets/78d2f8b0-1e74-4c92-83cf-22d1a3c9b053" />
+<br>
+Eight RTC's, a ES2812 LED-strip and LDR attached. 
