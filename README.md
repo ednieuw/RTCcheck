@@ -6,7 +6,8 @@ When a WS2812 or SK6812 LED-strip is attached colours indicate the drift of the 
 A small sketch is included for Arduino UNO or similar. 
 This UNO compatible script has no NTP time but is perfect to use if three or more DS3231 are tested. The one that drifts can be identified easily.
 
-<img width="900" alt="image" src="https://github.com/user-attachments/assets/9e922c23-0284-4c15-b8a1-e6c1403f3660" />
+<img width="900" alt="image" src="https://github.com/user-attachments/assets/bb552ae6-f178-4347-9184-caaee65aa5e3" />
+
 
 With this sketch and some wiring up to eight DS3231 can be tested using the NTP time server as reference.
 The sketch connect with WIFI to internet and can be controlled with a BLE terminal app or the Arduino IDE serial terminal. 
