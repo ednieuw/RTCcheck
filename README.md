@@ -4,11 +4,15 @@ Check up to eight DS3231 RTC's using a TCA9548A I2C multiplexer and an Arduino N
 When a WS2812 or SK6812 LED-strip is attached colours indicate the drift of the RTC.
 An optional LDR + 10kOhm resistor can be used to regulate the LED-intensity 
 
-A small sketch is included for Arduino UNO or similar. 
+This sketch is used in a larger project and has too much functionality.
+
+A smaller sketch is included for Arduino UNO, Nano or similar. 
 This UNO compatible script has no NTP time but is perfect to use if three or more DS3231 are tested. The one that drifts can be identified easily.
 
-<img width="900" alt="image" src="https://github.com/user-attachments/assets/bb552ae6-f178-4347-9184-caaee65aa5e3" />
-
+<img width="403" height="350" alt="image" src="https://github.com/user-attachments/assets/9460eed5-1b93-4828-95d6-70f2c5c7ce8e" /><br>
+And that some can drift after one month can be seen above.<br> 
+<br>
+<img width="900" alt="image" src="https://github.com/user-attachments/assets/bb552ae6-f178-4347-9184-caaee65aa5e3" /><br>
 
 With this sketch and some wiring up to eight DS3231 can be tested using the NTP time server as reference.
 The sketch connect with WIFI to internet and can be controlled with a BLE terminal app or the Arduino IDE serial terminal. 
@@ -30,48 +34,50 @@ Running on Arduino Nano Every with DS3231 connected to 5V pin. (But the DS3231's
 ```
 ___________________________________
 I Menu, II long menu
+F Print time differences from NTP
 ! See RTC times
 & Update system time all RTC times
 U Update system time in RTC U0-U7
 R Reset settings
 @ Restart
 ___________________________________
-Slope: 50     Min: 5     Max: 255 
+Slope: 1     Min: 1     Max: 255 
 BLE name: RTCtest
 IP-address: 192.168.178.94/update
 WIFI=On NTP=On BLE=On FastBLE=Off
-06/09/2025 17:03:10 
+26/12/2025 16:03:10 
 ___________________________________
-
-RTC 0: 06/09/2025 17:03:19 T: 23.75 C
-RTC 1: 06/09/2025 17:03:19 T: 24.25 C
-RTC 2: 06/09/2025 17:03:19 T: 23.50 C
- Clock time: 06/09/2025 17:03:18 
-   NTP time: 06/09/2025 17:03:18 
 
 ___________________________________
 A SSID B Password C BLE beacon name
 D Date (D15012021) T Time (T132145)
 E Timezone  (E<-02>2 or E<+01>-1)
+F Print time differences from NTP
 G Scan WIFI networks
 I Info menu, II long menu 
+K LDR reads/sec toggle On/Off
+N Display off between Nhhhh (N2208)
 P Status LED toggle On/Off
 R Reset settings, @ Reset MCU
+U Update system time in RTC U0-U7
+--Light intensity settings (1-250)--
+S Slope, L Min, M Max  (S50 L5 M200)
 W WIFI X NTP& Z WPS CCC BLE + Fast BLE
-RTC: ! See, & Update
-Ed Nieuwenhuijs Sep 2025
+RTC: ! See, & Update all RTC's
+Ed Nieuwenhuijs Nov 2025
 ___________________________________
-Slope: 50     Min: 5     Max: 255 
-SSID: FRITZ!Box
+Slope: 1     Min: 1     Max: 255 
+SSID: FRITZ!BoxEd
 BLE name: RTCtest
 IP-address: 192.168.178.94/update
 Timezone:CET-1CEST,M3.5.0,M10.5.0/3
 WIFI=On NTP=On BLE=On FastBLE=Off
 Rotary=Off Membrane=Off  DS3231=Off
-SK6812 strip with 1 LEDs (switch %)
-Software: ESP32_CommV08_RTC02.ino
-ESP32 Arduino core version: 2.0.17
-06/09/2025 17:30:46 
+WS2812 strip with 14 LEDs (switch %)
+Software: ESP32_RTCcheckV011.ino
+ESP32 Arduino core version: 3.3.5
+26/12/2025 16:03:14 
+___________________________________
 ```
 <img width="600" alt="image" src="https://github.com/user-attachments/assets/78d2f8b0-1e74-4c92-83cf-22d1a3c9b053" />
 <br>
