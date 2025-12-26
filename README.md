@@ -1,10 +1,12 @@
 # RTCcheck
 When using DS3231 time modules some are not functioning perfect.  
-Check up to eight DS3231 RTC's using a TCA9548A I2C multiplexer and an Arduino Nano ESP32, ESP32 C3, S3 or similar. 
+Check up to eight DS3231 RTC's using a TCA9548A I2C multiplexer and an Arduino Nano ESP32, ESP32 C3, S3 or similar.
+
 When a WS2812 or SK6812 LED-strip is attached colours indicate the drift of the RTC.
 An optional LDR + 10kOhm resistor can be used to regulate the LED-intensity 
 
-This sketch is used in a larger project and has too much functionality.
+This ESP32-sketch is a little overkill. Start a simple menu with 'i' from a (BLE) serial terminal.<br>
+For functionality info see here: https://github.com/ednieuw/Arduino-ESP32-Nano-Wordclock
 
 A smaller sketch is included for Arduino UNO, Nano or similar. 
 This UNO compatible script has no NTP time but is perfect to use if three or more DS3231 are tested. The one that drifts can be identified easily.
