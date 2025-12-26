@@ -12,7 +12,11 @@ A smaller sketch is included for Arduino UNO, Nano or similar.
 This UNO compatible script has no NTP time but is perfect to use if three or more DS3231 are tested. The one that drifts can be identified easily.
 
 <img width="403" height="350" alt="image" src="https://github.com/user-attachments/assets/9460eed5-1b93-4828-95d6-70f2c5c7ce8e" /><br>
-And that some can drift after one month can be seen above.<br> 
+And that some can drift after one month can be seen above.<br>
+T5 was and not temperature controlled DS1307 AT24C32<br> 
+T7 was a Keyestudio DS3231<br>
+The others were AT24C32 DS3231 modules.<br>
+T0 was drifting seriously.<br>
 <br>
 <img width="900" alt="image" src="https://github.com/user-attachments/assets/bb552ae6-f178-4347-9184-caaee65aa5e3" /><br>
 
