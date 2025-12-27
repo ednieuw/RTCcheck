@@ -11,7 +11,7 @@ For functionality info see here: https://github.com/ednieuw/Arduino-ESP32-Nano-W
 A smaller sketch is included for Arduino UNO, Nano or similar. 
 This UNO compatible script has no NTP time but is perfect to use if three or more DS3231 are tested. The one that drifts can be identified easily.
 
-<img width="403" height="350" alt="image" src="https://github.com/user-attachments/assets/9460eed5-1b93-4828-95d6-70f2c5c7ce8e" /><br>
+![image](https://github.com/user-attachments/assets/7b3b1c57-4fd4-4453-9dec-0626fe9eb665)<br>
 And that some can drift after one month can be seen above.<br>
 T5 was and not temperature controlled DS1307 AT24C32<br> 
 T7 was a Keyestudio DS3231<br>
