@@ -19,7 +19,14 @@ The others were AT24C32 DS3231 modules.<br>
 T0 was drifting seriously.<br>
 <br>
 <img width="900" alt="image" src="https://github.com/user-attachments/assets/bb552ae6-f178-4347-9184-caaee65aa5e3" /><br>
+Breadboard design for three RTC's but kan easily expanded. See pictures below.
 
+
+<img width="1396" height="670" alt="image" src="https://github.com/user-attachments/assets/709c617a-a76a-4291-8e3d-0929d2effe45" /><br>
+Fritzing design with Gerber files in this respority.  
+Some PCB's [can be ordered from PCBway](https://www.pcbway.com) for a few € or $. 
+
+The PCB is designed for an Arduino Nano ESP32. 
 With this sketch and some wiring up to eight DS3231 can be tested using the NTP time server as reference.
 The sketch connect with WIFI to internet and can be controlled with a BLE terminal app or the Arduino IDE serial terminal. 
 ```
