@@ -94,4 +94,4 @@ ___________________________________
 ```
 <img width="600" alt="image" src="https://github.com/user-attachments/assets/78d2f8b0-1e74-4c92-83cf-22d1a3c9b053" />
 <br>
-Eight RTC's, a ES2812 LED-strip and LDR attached. 
+Eight RTC's, a WS2812 LED-strip and LDR to control the LED intensity. 
