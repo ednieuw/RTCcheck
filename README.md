@@ -1,6 +1,9 @@
 # RTC check
 When using DS3231 time modules some are not functioning perfect.  
 Check up to eight DS3231 RTC's using a TCA9548A I2C multiplexer and an Arduino UNO/Nano or Arduino Nano ESP32, ESP32 C3, S3 or similar.
+<img width="750" alt="Screenshot 2025-12-28 at 23 06 35" src="https://github.com/user-attachments/assets/a7ce8147-e0d5-4eff-9c21-c87657b476f4" /><br>
+Control the ESP32 with a WIFI/serial webpage, a BLE app or IDE serial monitor.
+
 
 When a WS2812 or SK6812 LED-strip is attached colours indicate the drift of the RTC.
 An optional LDR + 10kOhm resistor can be used to regulate the LED-intensity 
