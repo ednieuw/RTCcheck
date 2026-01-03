@@ -1,20 +1,22 @@
 # RTC check
 When using DS3231 time modules some are not functioning perfect.  
 Check up to eight DS3231 RTC's using a TCA9548A I2C multiplexer and an Arduino UNO/Nano or Arduino Nano ESP32, ESP32 C3, S3 or similar.
-<img width="750" alt="Screenshot 2025-12-28 at 23 06 35" src="https://github.com/user-attachments/assets/a7ce8147-e0d5-4eff-9c21-c87657b476f4" /><br>
-Control the ESP32 with a WIFI/serial webpage, a BLE app or IDE serial monitor.
 
+<img width="750" alt="Screenshot 2025-12-28 at 23 06 35" src="https://github.com/user-attachments/assets/a7ce8147-e0d5-4eff-9c21-c87657b476f4" /><br>
+
+Control the ESP32 with a WIFI/serial webpage, a BLESerial app or IDE serial monitor.
 
 When a WS2812 or SK6812 LED-strip is attached colours indicate the drift of the RTC.
 An optional LDR + 10kOhm resistor can be used to regulate the LED-intensity 
 
 This ESP32-sketch is a little overkill. Start a simple menu with 'i' from a (BLE) serial terminal.<br>
-For functionality info see here: https://github.com/ednieuw/Arduino-ESP32-Nano-Wordclock
+For functionality info see here: https://github.com/ednieuw/Arduino-ESP32-Nano-Wordclock <br>and here: https://github.com/ednieuw/ESP32Communications.<br>
+The last link is this RTC-test sketch stripped from the RTC-test code.
 
 A smaller sketch is included for Arduino UNO, Nano or similar. 
-This UNO compatible script has no NTP time but is perfect to use if three or more DS3231 are tested. The one that drifts can be identified easily.
+This UNO compatible script has no NTP time but is perfect to use if three or more DS3231 are tested.<br> The one that drifts can be identified easily.
+<img width="500" alt="image" src="https://github.com/user-attachments/assets/7b3b1c57-4fd4-4453-9dec-0626fe9eb665" /><br>
 
-![image](https://github.com/user-attachments/assets/7b3b1c57-4fd4-4453-9dec-0626fe9eb665)<br>
 And that some can drift after one month can be seen above.<br>
 T5 was and not temperature controlled DS1307 AT24C32<br> 
 T7 was a Keyestudio DS3231<br>
@@ -25,7 +27,7 @@ T0 was drifting seriously.<br>
 Breadboard design for three RTC's but can easily be expanded to eight RTC's. See pictures below.
 
 
-<img width="1396" height="670" alt="image" src="https://github.com/user-attachments/assets/709c617a-a76a-4291-8e3d-0929d2effe45" /><br>
+<img width="960" alt="image" src="https://github.com/user-attachments/assets/709c617a-a76a-4291-8e3d-0929d2effe45" /><br>
 Fritzing design with Gerber files in this respority.  
 Five PCB's [can be ordered from **PCBway**](https://www.pcbway.com) for ~25€ / $. 
 
@@ -34,7 +36,7 @@ The PCB is designed for an Arduino Nano ESP32.
 ![RTCPCBv04](https://github.com/user-attachments/assets/34c2d917-9052-478f-aa89-b0baa56b681c)
 
 
-With this sketch and some wiring up to eight DS3231 can be tested using the NTP time server as reference.
+With this sketch and some wiring up to eight DS3231 modules can be tested using the NTP time server as reference.
 The sketch connect with WIFI to internet and can be controlled with a BLE terminal app or the Arduino IDE serial terminal. 
 ```
 RTC 0: 06/09/2025 17:39:30 T: 23.75 C
@@ -102,3 +104,42 @@ ___________________________________
 <img width="600" alt="image" src="https://github.com/user-attachments/assets/78d2f8b0-1e74-4c92-83cf-22d1a3c9b053" />
 <br>
 Eight RTC's, a WS2812 LED-strip and LDR to control the LED intensity. 
+
+### The Software
+All the specific code for DS3231-test in this code is labelled with RTC8.
+
+If searching for **RTC8** it is easy to find.  
+```
+//--------------------------------------------
+// RTC8 
+//-------------------------------------------- 
+RTC_DS3231 rtc[MAX_RTC]; 
+bool rtcActive[MAX_RTC] = {false};  
+int activeRTCCount     = 0;
+
+//--------------------------------------------
+// RTC8 Initialyse all connected RTC's
+//--------------------------------------------
+void SetupRTCs(void) 
+{
+  Serial.println("DS3231 RTC Multiplexer Test");
+  Serial.println("===========================");
+  sprintf(sptext, "Software: %s", SoftwareName());  Tekstprintln(sptext);   
+  
+  Serial.print("TCA9548A search on addres 0x"); 
+
+```
+
+### Connect via Bluetooth
+To make life easy it is preferred to use a phone or tablet and a Bluetooth communication app to enter the WIFI credentials into the clock.<br>
+![image](https://github.com/ednieuw/Arduino-ESP32-Nano-Wordclock/assets/12166816/261800f1-7cd6-4078-8c7e-ad9cd2ba47ec)
+ 	 	 
+BLESerial nRF	BLE Serial Pro	Serial Bluetooth Terminal
+- Download a Bluetooth UART serial terminal app on your phone, PC, or tablet.<br>
+
+- For IOS iPhone or iPad (Buy this one to support me): [BLE Serial Pro](https://apps.apple.com/nl/app/ble-serial-pro/id1632245655?l=en).<br>
+Or the free, less sophisticated app: [BLE serial nRF](https://apps.apple.com/nl/app/bleserial-nrf/id1632235163?l).<br>
+Tip: Turn on Fast BLE with option + in the menu for a faster transmission.
+
+- For Android use: [Serial Bluetooth terminal](https://play.google.com/store/apps/details?id=de.kai_morich.serial_bluetooth_terminal). <br>
+Do not turn on Fast BLE in the menu. (Off = default)
