@@ -14,7 +14,9 @@ For functionality info see here: https://github.com/ednieuw/Arduino-ESP32-Nano-W
 The last link is this RTC-test sketch stripped from the RTC-test code.
 
 A smaller sketch is included for Arduino UNO, Nano or similar. 
-This UNO compatible script has no NTP time but is perfect to use if three or more DS3231 are tested.<br> The one that drifts can be identified easily.
+This UNO compatible script has no NTP time but is perfect to use if three or more DS3231 are tested.<br>
+The one that drifts can be identified easily.
+
 <img width="500" alt="image" src="https://github.com/user-attachments/assets/7b3b1c57-4fd4-4453-9dec-0626fe9eb665" /><br>
 
 And that some can drift after one month can be seen above.<br>
