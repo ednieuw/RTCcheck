@@ -4,7 +4,7 @@ Check up to eight DS3231 RTC's using a TCA9548A I2C multiplexer and an Arduino U
 
 <img width="750" alt="Screenshot 2025-12-28 at 23 06 35" src="https://github.com/user-attachments/assets/a7ce8147-e0d5-4eff-9c21-c87657b476f4" /><br>
 
-Control the ESP32 with a WIFI/serial webpage, a BLESerial app or IDE serial monitor.
+Control the ESP32 RTC-tester with a WIFI/serial webpage, a BLESerial app or IDE serial monitor.
 
 When a WS2812 or SK6812 LED-strip is attached colours indicate the drift of the RTC.
 An optional LDR + 10kOhm resistor can be used to regulate the LED-intensity 
@@ -19,6 +19,7 @@ The one that drifts can be identified easily.
 
 <img width="500" alt="image" src="https://github.com/user-attachments/assets/7b3b1c57-4fd4-4453-9dec-0626fe9eb665" /><br>
 
+
 And that some can drift after one month can be seen above.<br>
 T5 was and not temperature controlled DS1307 AT24C32<br> 
 T7 was a Keyestudio DS3231<br>
@@ -30,12 +31,17 @@ Breadboard design for three RTC's but can easily be expanded to eight RTC's. See
 
 
 <img width="960" alt="image" src="https://github.com/user-attachments/assets/709c617a-a76a-4291-8e3d-0929d2effe45" /><br>
-Fritzing design with Gerber files in this respority.  
+Fritzing design with Gerber files in this repository.  
 Five PCB's [can be ordered from **PCBway**](https://www.pcbway.com) for ~25€ / $. 
 
 The PCB is designed for an Arduino Nano ESP32. 
 
 ![RTCPCBv04](https://github.com/user-attachments/assets/34c2d917-9052-478f-aa89-b0baa56b681c)
+
+The PCBV04 design was made for the Adafruit TCA9548A I2C multiplexer that happens to be 2.54mm smaller than the cheap ones.<br>
+In PCBV05 it is possible to use both widths.
+
+![RTCPCBv05](https://github.com/user-attachments/assets/3f6f22bf-063d-4d8e-b8d7-ddcfa6c0792c)
 
 
 With this sketch and some wiring up to eight DS3231 modules can be tested using the NTP time server as reference.
