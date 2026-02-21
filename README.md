@@ -1,5 +1,8 @@
 # RTC check
 When using DS3231 time modules some are not functioning perfect.  
+
+![RTCcheckPCB](https://github.com/user-attachments/assets/67f37b49-8d6e-440c-8710-4fb9734b30e2)
+
 Check up to eight DS3231 RTC's using a TCA9548A I2C multiplexer and an Arduino UNO/Nano or Arduino Nano ESP32, ESP32 C3, S3 or similar.
 
 <img width="750" alt="Screenshot 2025-12-28 at 23 06 35" src="https://github.com/user-attachments/assets/a7ce8147-e0d5-4eff-9c21-c87657b476f4" /><br>
