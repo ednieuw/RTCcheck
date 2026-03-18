@@ -34,18 +34,24 @@ Breadboard design for three RTC's but can easily be expanded to eight RTC's. See
 
 
 <img width="960" alt="image" src="https://github.com/user-attachments/assets/709c617a-a76a-4291-8e3d-0929d2effe45" /><br>
-Fritzing design with Gerber files in this repository.  
-Five PCB's [can be ordered from **PCBway**](https://www.pcbway.com) for ~25€ / $. 
 
-The PCB is designed for an Arduino Nano ESP32. 
 
 ![RTCPCBv04](https://github.com/user-attachments/assets/34c2d917-9052-478f-aa89-b0baa56b681c)
 
 The PCBV04 design was made for the Adafruit TCA9548A I2C multiplexer that happens to be 2.54mm smaller than the cheap ones.<br>
 In PCBV05 it is possible to use both widths.
+In PCBV06 the SQW amd 32K pins of the DS3231 can be accessed on the PCB.
+
 
 ![RTCPCBv05](https://github.com/user-attachments/assets/3f6f22bf-063d-4d8e-b8d7-ddcfa6c0792c)
 
+![RTCPCBv06](RTCPCBv06.jpg)
+
+
+Fritzing design with Gerber files can be found in this repository.  
+Five PCB's [can be ordered from **PCBway**](https://www.pcbway.com) for ~25€ / $. 
+
+The PCB is designed for an Arduino Nano ESP32. 
 
 With this sketch and some wiring up to eight DS3231 modules can be tested using the NTP time server as reference.
 The sketch connect with WIFI to internet and can be controlled with a BLE terminal app or the Arduino IDE serial terminal. 
