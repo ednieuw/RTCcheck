@@ -48,8 +48,10 @@ In PCBV06 the SQW amd 32K pins of the DS3231 can be accessed on the PCB.
 ![RTCPCBv06](RTCPCBv06.jpg)
 
 
-Fritzing design with Gerber files can be found in this repository.  
-Five PCB's [can be ordered from **PCBway**](https://www.pcbway.com) for ~25€ / $. 
+Fritzing design with Gerber files can be found in this repository.<br>
+Five PCB's [can be ordered from **PCBway**](https://www.pcbway.com) for ~25€ / $.<br> 
+I am very happy with the PCB's they print for me. Just upload the Gerber-files and choose the colour of the PCB.<br> 
+They are processed directly and arrive quick here in Europe. The quality is sublime and are easy to solder. 
 
 The PCB is designed for an Arduino Nano ESP32. 
 
