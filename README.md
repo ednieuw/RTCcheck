@@ -12,11 +12,13 @@ Control the ESP32 RTC-tester with a WIFI/serial webpage, a BLESerial app or IDE 
 When a WS2812 or SK6812 LED-strip is attached colours indicate the drift of the RTC.
 An optional LDR + 10kOhm resistor can be used to regulate the LED-intensity 
 
-This ESP32-sketch is a little overkill. Start a simple menu with 'i' from a (BLE) serial terminal.<br>
+This ESP32-sketch is a little overkill for its use but easy for me to add it to an existing project.
+
+Start a simple menu by sending 'i' from a (BLE) serial terminal.<br>
 For functionality info see here: https://github.com/ednieuw/Arduino-ESP32-Nano-Wordclock <br>and here: https://github.com/ednieuw/ESP32Communications.<br>
 The last link is this RTC-test sketch stripped from the RTC-test code.
 
-A smaller sketch is included for Arduino UNO, Nano or similar. 
+A smaller sketch is included for the Arduino UNO, Nano or similar. 
 This UNO compatible script has no NTP time but is perfect to use if three or more DS3231 are tested.<br>
 The one that drifts can be identified easily.
 
